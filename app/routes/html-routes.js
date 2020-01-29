@@ -14,22 +14,22 @@ module.exports = function(app) {
 
   //To Homepage
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   //To loginpage
-  app.get("/login", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/loginPage.html"));
+  app.get("/champions", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/champions.html"));
   });
 
   //To registration page
-  app.get("/register", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/registerPage.html"));
+  app.get("/add", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/add.html"));
   });
   
   //To user interface to add movies
-  app.get("/user", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/userAccount.html"));
+  app.get("/items", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/items.html"));
     console.log(req.body.first_name);
     });
 

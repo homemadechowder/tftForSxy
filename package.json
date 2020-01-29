@@ -1,0 +1,26 @@
+{
+  "name": "tftforsxy",
+  "version": "1.0.0",
+  "description": "Tft for sxy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/homemadechowder/tftForSxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/homemadechowder/tftForSxy/issues"
+  },
+  "homepage": "https://github.com/homemadechowder/tftForSxy#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "path": "^0.12.7",
+    "sequelize": "^5.21.3"
+  }
+}

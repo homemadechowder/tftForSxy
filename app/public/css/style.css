@@ -1,0 +1,8 @@
+h1{
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.jumbotron{
+    background-image: url("../img/banner_image.jpg");
+    font-family: 'Noto Sans SC', sans-serif;
+}

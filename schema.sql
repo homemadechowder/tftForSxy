@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS tft_db;
+
+CREATE DATABASE tft_db;

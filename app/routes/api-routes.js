@@ -31,6 +31,16 @@ module.exports = function(app) {
       res.json(results);
     })
   });
+
+  app.get("/api/champions/:name", function(req, res) {
+    db.Media.findOne({
+      where:{
+        category:req.params.name
+      }
+    }).then(function(results){
+      res.json(results);
+    })
+  });
   
   //POST ROUTE FOR USERS
   app.post("/api/champions", function(req, res) {

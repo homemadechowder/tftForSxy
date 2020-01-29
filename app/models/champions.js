@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    //MEDIATABLE 
+    //champion table
     var champions = sequelize.define("champions", {
       image:{
         type: DataTypes.STRING,
@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes) {
       cost:{
         type: DataTypes.INTEGER
       },
-      ult:{
+      items:{
         type: DataTypes.STRING
       }
 
