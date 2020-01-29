@@ -6,18 +6,18 @@ var items = [
 var champions = [
     {
         image: 'https://www.breakflip.com/uploads/LoL/Sting/Guides%20TFT/Set%202%20champions/TFT-veigar2.jpg',
-        name: 'Veigar 小蓝人',
+        name: 'Veigar',
         synergy1: 'Shadow',
-        synergy2: 'Mage',
+        synergy3: 'Mage',
         cost: 3,
         items: 'Seraph(tear + tear) x2, Hat(stick + stick) 只要加法伤其实都可 (以棒子跟眼泪物品为重'
     },
 
     {
         image: 'https://www.breakflip.com/uploads/LoL/Sting/Guides%20TFT/Set%202%20champions/TFT-Taliyah.png',
-        name: 'Taliyah 石头女',
+        name: 'Taliyah',
         synergy1: 'Mountain',
-        synergy2: 'Mage',
+        synergy3: 'Mage',
         cost: 3,
         items: '随便普普角色 用来冲六法师的'
     },
