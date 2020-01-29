@@ -10,7 +10,7 @@ var champions = [
         synergy1: 'Shadow',
         synergy2: 'Mage',
         cost: 3,
-        items: "Seraph(tear + tear) x2, Hat(stick + stick) Any item that increase spell damage is good"
+        items: 'Seraph(tear + tear) x2, Hat(stick + stick) 加法伤的都好'
     },
 
     {
@@ -19,7 +19,7 @@ var champions = [
         synergy1: 'Mountain',
         synergy2: 'Mage',
         cost: 3,
-        items: "Pretty shitty character, don't need much items. Mainly used for 6 mages or 2 Mountains"
+        items: "挺烂的角色 用来冲6 mages"
     },
 
 ];
@@ -37,9 +37,25 @@ $("#search-btn").on("click", function(){
     
     getChampion(input);
 });
+
+$("#add-btn").on("click", function(){
+    var newChamp = {
+        image: $("#image").val().trim(),
+        name: $("#name").val().trim(),
+        synergy1: $("#syn1").val().trim(),
+        synergy2: $("#syn2").val().trim(),
+        synergy3: $("#syn3").val().trim(),
+        cost: $("#cost").val().trim(),
+        items: $("#items").val()
+    }
+    
+    postChampion(newChamp);
+});
+
+
 function postChampion(champions){
     $.post("/api/champions", champions).then(function(data){
-        console.log("Loading champions into database");
+        console.log("Loading " + data.name + " into database");
         
     }); 
 }
@@ -51,7 +67,7 @@ function getChampion(name){
 
         $("#name").text(response.name)
                   .append("<div><img src = '"+response.image+"' alt = img>");
-        $("#cost").text(response.cost);
+        $("#cost").text("Cost " + response.cost + " 金");
         $("#syn1").text(response.synergy1);
         $("#syn2").text(response.synergy2);
         $("#syn3").text(response.synergy3);

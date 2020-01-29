@@ -53,7 +53,7 @@ module.exports = function(app) {
       synergy2: req.body.synergy2,
       synergy3: req.body.synergy3,
       cost: req.body.cost,
-      ult: req.body.ult
+      items: req.body.items
       
     }).then(function(results){
       console.log(results);
