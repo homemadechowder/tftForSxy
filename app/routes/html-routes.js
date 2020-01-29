@@ -14,11 +14,6 @@ module.exports = function(app) {
 
   //To Homepage
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
-
-  //To loginpage
-  app.get("/champions", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/champions.html"));
   });
 

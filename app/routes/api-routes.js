@@ -22,10 +22,10 @@ module.exports = function(app) {
   });
 
   //Get route for synergy
-  app.get("/api/champions/:synergy", function(req, res) {
-    db.Media.findAll({
+  app.get("/api/champions/synergy/:synergy", function(req, res) {
+    db.champions.findAll({
       where:{
-        category:req.params.synergy
+        synergy:req.params.synergy
       }
     }).then(function(results){
       res.json(results);
@@ -33,9 +33,9 @@ module.exports = function(app) {
   });
 
   app.get("/api/champions/:name", function(req, res) {
-    db.Media.findOne({
+    db.champions.findOne({
       where:{
-        category:req.params.name
+        name:req.params.name
       }
     }).then(function(results){
       res.json(results);

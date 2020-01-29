@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <title>TFT for SXY</title>
 </head>
 <body>
+    
+  <div class="container">
+    <div class="jumbotron">
+      <h1>TFT for SXY</h1>
+      <h1>宝贝瑶瑶这场想走什么呢</h1>
+      <hr>
+      <a href="/champions"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> Search/View Characters</button></a>
+    </div>
+    <div class="row">
+
+      <div class="col-12">
+
+        <div class="card">
+          <div class="card-header">
+            <h3><strong>新加一位角色吧</strong></h3>
+          </div>
+          <div class="card-body">
+            <form method="POST" role="form">
+
+              <div class="form-group">
+                 <label for="name">Image Link<label>
+                 <input type="text" class="form-control" id="name">
+                </div>
+
+              <div class="form-group">
+                <label for="name">名字</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+
+              <div class="form-group">
+                <label for="role">属性1</label>
+                <input type="text" class="form-control" id="syn1">
+              </div>
+
+              <div class="form-group">
+                <label for="role">属性2</label>
+                <input type="text" class="form-control" id="syn2">
+              </div>
+
+              <div class="form-group">
+                <label for="age">属性3 (没的话别填</label>
+                <input type="text" class="form-control" id="syn3">
+              </div>
+
+              <div class="form-group">
+                <label for="force-points">笔记+物品栏</label>
+                <input type="text" class="form-control" id="items">
+              </div>
+
+            </form>
+            <br>
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span> Add to the Force</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
     
 </body>
 </html>

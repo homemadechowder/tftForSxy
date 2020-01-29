@@ -1,6 +1,11 @@
+
+
+
 module.exports = function(sequelize, DataTypes) {
     //champion table
-    var champions = sequelize.define("champions", {
+   
+    var champions = sequelize.define("champions", 
+    {    
       image:{
         type: DataTypes.STRING,
         allowNull: false,
@@ -29,7 +34,7 @@ module.exports = function(sequelize, DataTypes) {
       items:{
         type: DataTypes.STRING
       }
-
+    
     });
     return champions;
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

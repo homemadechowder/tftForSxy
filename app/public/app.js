@@ -8,18 +8,18 @@ var champions = [
         image: 'https://www.breakflip.com/uploads/LoL/Sting/Guides%20TFT/Set%202%20champions/TFT-veigar2.jpg',
         name: 'Veigar',
         synergy1: 'Shadow',
-        synergy3: 'Mage',
+        synergy2: 'Mage',
         cost: 3,
-        items: 'Seraph(tear + tear) x2, Hat(stick + stick) 只要加法伤其实都可 (以棒子跟眼泪物品为重'
+        items: "Seraph(tear + tear) x2, Hat(stick + stick) Any item that increase spell damage is good"
     },
 
     {
         image: 'https://www.breakflip.com/uploads/LoL/Sting/Guides%20TFT/Set%202%20champions/TFT-Taliyah.png',
         name: 'Taliyah',
         synergy1: 'Mountain',
-        synergy3: 'Mage',
+        synergy2: 'Mage',
         cost: 3,
-        items: '随便普普角色 用来冲六法师的'
+        items: "Pretty shitty character, don't need much items. Mainly used for 6 mages or 2 Mountains"
     },
 
 ];
@@ -40,7 +40,7 @@ $("#search-btn").on("click", function(){
 function postChampion(champions){
     $.post("/api/champions", champions).then(function(data){
         console.log("Loading champions into database");
-    
+        
     }); 
 }
 
@@ -50,11 +50,12 @@ function getChampion(name){
         console.log(response);
 
         $("#name").text(response.name)
-                  .append("<img src = '"+response.image+"' alt = img>");
+                  .append("<div><img src = '"+response.image+"' alt = img>");
         $("#cost").text(response.cost);
         $("#syn1").text(response.synergy1);
         $("#syn2").text(response.synergy2);
         $("#syn3").text(response.synergy3);
+        $("#items").text(response.items);
 
         
     });
