@@ -90,7 +90,9 @@ $("#search-btn").on("click", function(){
     
     getChampion(input);
 
-    getSynergy(input);
+    getSynergy1(input);
+    getSynergy2(input);
+    getSynergy3(input);
 });
 
 $("#add-btn").on("click", function(){
@@ -132,7 +134,7 @@ function getChampion(name){
     });
 }
 
-function getSynergy(synergy){
+function getSynergy1(synergy1){
     $.get("/api/champions/synergy/"+synergy1)
     .then(function(response){
         console.log(response);
@@ -151,7 +153,8 @@ function getSynergy(synergy){
 
 
     });
-
+}
+function getSynergy2(synergy2){
     $.get("/api/champions/synergy/"+synergy2)
     .then(function(response){
         console.log(response);
@@ -170,7 +173,8 @@ function getSynergy(synergy){
 
 
     });
-
+}
+function getSynergy3(synergy3){
     $.get("/api/champions/synergy/"+synergy3)
     .then(function(response){
         console.log(response);
