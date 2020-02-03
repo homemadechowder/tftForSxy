@@ -163,7 +163,6 @@ function getSynergy1(synergy1){
 
         for (i = 1; i < response.length; i++){
         
-        $(".card-header").append("<div class='new1 card-body'></div>") 
         
         $("new1").append('<h2 id="name1">' + response[i].name + '</h2>')
                   .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
@@ -194,8 +193,6 @@ function getSynergy2(synergy2){
 
         for (i = 1; i < response.length; i++){
         
-            $(".card-header").append("<div class='new1 card-body'></div>") 
-        
             $("new1").append('<h2 id="name1">' + response[i].name + '</h2>')
                       .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
             $("#name1").append('<h3><strong>Cost: </strong> <span id="cost1">' + response[i].cost + "金");
@@ -224,8 +221,6 @@ function getSynergy3(synergy3){
         $("#items").text(response[0].items);
 
         for (i = 1; i < response.length; i++){
-        
-            $(".card-header").append("<div class='new1 card-body'></div>") 
         
             $("new1").append('<h2 id="name1">' + response[i].name + '</h2>')
                       .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
