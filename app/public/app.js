@@ -133,7 +133,45 @@ function getChampion(name){
 }
 
 function getSynergy(synergy){
-    $.get("/api/champions/synergy"+synergy)
+    $.get("/api/champions/synergy/"+synergy1)
+    .then(function(response){
+        console.log(response);
+
+        for (i = 0; i < response.length; i++){
+            
+        $("#name").text(response[i].name)
+                  .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
+        $("#cost").text("Cost: " + response[i].cost + "金");
+        $("#syn1").text(response[i].synergy1);
+        $("#syn2").text(response[i].synergy2);
+        $("#syn3").text(response[i].synergy3);
+        $("#items").text(response[i].items);
+
+        }
+
+
+    });
+
+    $.get("/api/champions/synergy/"+synergy2)
+    .then(function(response){
+        console.log(response);
+
+        for (i = 0; i < response.length; i++){
+            
+        $("#name").text(response[i].name)
+                  .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
+        $("#cost").text("Cost: " + response[i].cost + "金");
+        $("#syn1").text(response[i].synergy1);
+        $("#syn2").text(response[i].synergy2);
+        $("#syn3").text(response[i].synergy3);
+        $("#items").text(response[i].items);
+
+        }
+
+
+    });
+
+    $.get("/api/champions/synergy/"+synergy3)
     .then(function(response){
         console.log(response);
 
