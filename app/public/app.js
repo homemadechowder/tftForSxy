@@ -27,7 +27,7 @@ var champions = [
         synergy1: 'Light',
         synergy2: '搜綁得',
         cost: 4,
-        items: "BFsword + bow x 3"
+        items: "BFsword + bow x 3 , Or anything that gives him attack damage or attack speed, Infinity edge(sword + glove) can be good"
     },
 
     {
@@ -54,6 +54,23 @@ var champions = [
         synergy2: 'Summoner',
         cost: 4,
         items: "Zeke's (Sword + Belt), Redemption(Tear + belt), anything tanky like vest+vest cloak+cloak, keep him alive long so he casts alot of times"
+    },
+    {
+        image: 'https://www.breakflip.com/uploads/Drui/2019/Aout/NouveauDossier/TFT/yorick-nouveau-champion-tft-infos-set-2.jpg',
+        name: 'Yorick',
+        synergy1: 'Light',
+        synergy2: 'Summoner',
+        cost: 4,
+        items: "Zeke's (Sword + Belt), Redemption(Tear + belt), anything tanky like vest+vest cloak+cloak, keep him alive long so he casts alot of times"
+    },
+
+    {
+        image: 'https://1lal3e4eckus2d9p8g17wl8c-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/Zed_1-960x567.jpg',
+        name: 'Zed',
+        synergy1: 'Light',
+        synergy2: 'Summoner',
+        cost: 5,
+        items: "If going light: Guardian Angel(Sword + Vest), Redemption(Tear + belt), Light Item(金鏟+cloak) These are ideal. Just put items that are useful for everyone because he doubles. If going assassin, just go attack adam stuff + Guardian Angel."
     },
 
 
@@ -102,7 +119,7 @@ function getChampion(name){
 
         $("#name").text(response.name)
                   .append("<div><img style = 'height: 200px' src = '"+response.image+"' alt = img>");
-        $("#cost").text("Cost " + response.cost + " 金");
+        $("#cost").text("Cost: " + response.cost + "金");
         $("#syn1").text(response.synergy1);
         $("#syn2").text(response.synergy2);
         $("#syn3").text(response.synergy3);
