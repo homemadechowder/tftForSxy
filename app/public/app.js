@@ -154,7 +154,7 @@ function getSynergy1(synergy1){
         console.log(response);
 
         $("#name").text(response[0].name)
-                  .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
+                  .append("<div><img style = 'height: 200px' src = '"+response[0].image+"' alt = img>");
         $("#cost").text("Cost: " + response[i].cost + "金");
         $("#syn1").text(response[0].synergy1);
         $("#syn2").text(response[0].synergy2);
@@ -197,7 +197,7 @@ function getSynergy2(synergy2){
         console.log(response);
        
         $("#name").text(response[0].name)
-                  .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
+                  .append("<div><img style = 'height: 200px' src = '"+response[0].image+"' alt = img>");
         $("#cost").text("Cost: " + response[i].cost + "金");
         $("#syn1").text(response[0].synergy1);
         $("#syn2").text(response[0].synergy2);
@@ -238,8 +238,8 @@ function getSynergy3(synergy3){
     $.get("/api/champions/"+synergy3)
     .then(function(response){
         console.log(response);
-$("#name").text(response[0].name)
-                  .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
+        $("#name").text(response[0].name)
+                  .append("<div><img style = 'height: 200px' src = '"+response[0].image+"' alt = img>");
         $("#cost").text("Cost: " + response[i].cost + "金");
         $("#syn1").text(response[0].synergy1);
         $("#syn2").text(response[0].synergy2);
