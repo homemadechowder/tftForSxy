@@ -138,7 +138,7 @@ function getChampion(name){
 
         $("#name").text(response.name)
                   .append("<div><img style = 'height: 200px' src = '"+response.image+"' alt = img>");
-        $("#cost").text("Cost: " + response.cost + "金");
+        $("#cost").text(response.cost + "金");
         $("#syn1").text(response.synergy1);
         $("#syn2").text(response.synergy2);
         $("#syn3").text(response.synergy3);
@@ -153,15 +153,38 @@ function getSynergy1(synergy1){
     .then(function(response){
         console.log(response);
 
-        for (i = 0; i < response.length; i++){
-            
-        $("#name").text(response[i].name)
+        $("#name").text(response[0].name)
                   .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
         $("#cost").text("Cost: " + response[i].cost + "金");
-        $("#syn1").text(response[i].synergy1);
-        $("#syn2").text(response[i].synergy2);
-        $("#syn3").text(response[i].synergy3);
-        $("#items").text(response[i].items);
+        $("#syn1").text(response[0].synergy1);
+        $("#syn2").text(response[0].synergy2);
+        $("#syn3").text(response[0].synergy3);
+        $("#items").text(response[0].items);
+
+
+        // <div id = "first" class="card-body">
+        //         <h2 id="name">名字</h2>
+        //         <div id="stats">
+        //           <h3><strong>Cost: </strong> <span id="cost"></span></h3>
+        //           <h3><strong>属性1</strong> <span id="syn1"></span></h3>
+        //           <h3><strong>属性2</strong> <span id="syn2"></span></h3>
+        //           <h3><strong>属性3</strong> <span id="syn3"></span></h3>
+        //           <h3><strong>推荐物品/笔记</strong> <span id="items"></span></h3>
+        //         </div>
+
+        //       </div>
+
+        for (i = 1; i < response.length; i++){
+        
+        $(".card-header").append("<div class='new card-body'></div>") 
+        
+        $("new").append('<h2 id="name">' + response[i].name + '</h2>')
+                  .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
+        $("#name").append('<h3><strong>Cost: </strong> <span id="cost">' + response[i].cost + "金");
+        $("#cost").append('<h3><strong>属性1</strong> <span id="syn1">'+ response[i].synergy1);
+        $("#syn1").append('<h3><strong>属性2</strong> <span id="syn2">'+ response[i].synergy2);
+        $("#syn2").append('<h3><strong>属性3</strong> <span id="syn3">'+ response[i].synergy3);
+        $("#syn3").append('<h3><strong>推荐物品/笔记</strong> <span id="items">' + response[i].items);
 
         }
 
@@ -172,16 +195,39 @@ function getSynergy2(synergy2){
     $.get("/api/champions/"+synergy2)
     .then(function(response){
         console.log(response);
-
-        for (i = 0; i < response.length; i++){
-            
-        $("#name").text(response[i].name)
+       
+        $("#name").text(response[0].name)
                   .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
         $("#cost").text("Cost: " + response[i].cost + "金");
-        $("#syn1").text(response[i].synergy1);
-        $("#syn2").text(response[i].synergy2);
-        $("#syn3").text(response[i].synergy3);
-        $("#items").text(response[i].items);
+        $("#syn1").text(response[0].synergy1);
+        $("#syn2").text(response[0].synergy2);
+        $("#syn3").text(response[0].synergy3);
+        $("#items").text(response[0].items);
+
+
+        // <div id = "first" class="card-body">
+        //         <h2 id="name">名字</h2>
+        //         <div id="stats">
+        //           <h3><strong>Cost: </strong> <span id="cost"></span></h3>
+        //           <h3><strong>属性1</strong> <span id="syn1"></span></h3>
+        //           <h3><strong>属性2</strong> <span id="syn2"></span></h3>
+        //           <h3><strong>属性3</strong> <span id="syn3"></span></h3>
+        //           <h3><strong>推荐物品/笔记</strong> <span id="items"></span></h3>
+        //         </div>
+
+        //       </div>
+
+        for (i = 1; i < response.length; i++){
+        
+        $(".card-header").append("<div class='new card-body'></div>") 
+        
+        $("new").append('<h2 id="name">' + response[i].name + '</h2>')
+                  .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
+        $("#name").append('<h3><strong>Cost: </strong> <span id="cost">' + response[i].cost + "金");
+        $("#cost").append('<h3><strong>属性1</strong> <span id="syn1">'+ response[i].synergy1);
+        $("#syn1").append('<h3><strong>属性2</strong> <span id="syn2">'+ response[i].synergy2);
+        $("#syn2").append('<h3><strong>属性3</strong> <span id="syn3">'+ response[i].synergy3);
+        $("#syn3").append('<h3><strong>推荐物品/笔记</strong> <span id="items">' + response[i].items);
 
         }
 
@@ -192,16 +238,38 @@ function getSynergy3(synergy3){
     $.get("/api/champions/"+synergy3)
     .then(function(response){
         console.log(response);
-
-        for (i = 0; i < response.length; i++){
-            
-        $("#name").text(response[i].name)
+$("#name").text(response[0].name)
                   .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
         $("#cost").text("Cost: " + response[i].cost + "金");
-        $("#syn1").text(response[i].synergy1);
-        $("#syn2").text(response[i].synergy2);
-        $("#syn3").text(response[i].synergy3);
-        $("#items").text(response[i].items);
+        $("#syn1").text(response[0].synergy1);
+        $("#syn2").text(response[0].synergy2);
+        $("#syn3").text(response[0].synergy3);
+        $("#items").text(response[0].items);
+
+
+        // <div id = "first" class="card-body">
+        //         <h2 id="name">名字</h2>
+        //         <div id="stats">
+        //           <h3><strong>Cost: </strong> <span id="cost"></span></h3>
+        //           <h3><strong>属性1</strong> <span id="syn1"></span></h3>
+        //           <h3><strong>属性2</strong> <span id="syn2"></span></h3>
+        //           <h3><strong>属性3</strong> <span id="syn3"></span></h3>
+        //           <h3><strong>推荐物品/笔记</strong> <span id="items"></span></h3>
+        //         </div>
+
+        //       </div>
+
+        for (i = 1; i < response.length; i++){
+        
+        $(".card-header").append("<div class='new card-body'></div>") 
+        
+        $("new").append('<h2 id="name">' + response[i].name + '</h2>')
+                  .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
+        $("#name").append('<h3><strong>Cost: </strong> <span id="cost">' + response[i].cost + "金");
+        $("#cost").append('<h3><strong>属性1</strong> <span id="syn1">'+ response[i].synergy1);
+        $("#syn1").append('<h3><strong>属性2</strong> <span id="syn2">'+ response[i].synergy2);
+        $("#syn2").append('<h3><strong>属性3</strong> <span id="syn3">'+ response[i].synergy3);
+        $("#syn3").append('<h3><strong>推荐物品/笔记</strong> <span id="items">' + response[i].items);
 
         }
 
