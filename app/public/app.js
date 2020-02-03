@@ -70,8 +70,9 @@ var champions = [
         synergy1: 'Light',
         synergy2: 'Summoner',
         cost: 5,
-        items: "If going light: Guardian Angel(Sword + Vest), Redemption(Tear + belt), Light Item(金鏟+cloak) These are ideal. Just put items that are useful for everyone because he doubles. If going assassin, just go attack adam stuff + Guardian Angel."
+        items: "If going light: Guardian Angel(Sword + Vest), Redemption(Tear + belt), Light Item(金鏟+cloak) These are ideal. Just put items that are useful for everyone because he doubles."
     },
+
 
 
 ];
@@ -88,6 +89,8 @@ $("#search-btn").on("click", function(){
     var input = $("#character-search").val().trim();
     
     getChampion(input);
+
+    getSynergy(input);
 });
 
 $("#add-btn").on("click", function(){
@@ -130,9 +133,23 @@ function getChampion(name){
 }
 
 function getSynergy(synergy){
-    $.get("/api/champions/"+synergy)
+    $.get("/api/champions/synergy"+synergy)
     .then(function(response){
         console.log(response);
+
+        for (i = 0; i < response.length; i++){
+            
+        $("#name").text(response[i].name)
+                  .append("<div><img style = 'height: 200px' src = '"+response[i].image+"' alt = img>");
+        $("#cost").text("Cost: " + response[i].cost + "金");
+        $("#syn1").text(response[i].synergy1);
+        $("#syn2").text(response[i].synergy2);
+        $("#syn3").text(response[i].synergy3);
+        $("#items").text(response[i].items);
+
+        }
+
+
     });
 }
 
