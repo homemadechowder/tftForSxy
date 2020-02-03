@@ -25,7 +25,7 @@ module.exports = function(app) {
   app.get("/api/champions/:synergy1", function(req, res) {
     db.champions.findAll({
       where:{
-        synergy:req.params.synergy1
+        synergy1:req.params.synergy1
       }
     }).then(function(results){
       res.json(results);
@@ -34,16 +34,17 @@ module.exports = function(app) {
   app.get("/api/champions/:synergy2", function(req, res) {
     db.champions.findAll({
       where:{
-        synergy:req.params.synergy2
+        synergy2:req.params.synergy2
       }
     }).then(function(results){
       res.json(results);
     })
   });
+
   app.get("/api/champions/:synergy3", function(req, res) {
     db.champions.findAll({
       where:{
-        synergy:req.params.synergy3
+        synergy3:req.params.synergy3
       }
     }).then(function(results){
       res.json(results);
