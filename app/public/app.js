@@ -85,13 +85,27 @@ for (i = 0; i < champions.length; i++)
     postChampion(champions[i]);
 }
 
-$("#search-btn").on("click", function(){
+$("#search-btn1").on("click", function(){
     var input = $("#character-search").val().trim();
     
     getChampion(input);
 
+    
+});
+$("#search-btn2").on("click", function(){
+    var input = $("#character-search").val().trim();
+    
     getSynergy1(input);
+});
+$("#search-btn3").on("click", function(){
+    var input = $("#character-search").val().trim();
+    
     getSynergy2(input);
+
+});
+$("#search-btn4").on("click", function(){
+    var input = $("#character-search").val().trim();
+    
     getSynergy3(input);
 });
 
