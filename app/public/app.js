@@ -21,6 +21,41 @@ var champions = [
         cost: 3,
         items: "挺烂的角色 用来冲6 mages"
     },
+    {
+        image: 'https://mobalytics.gg/wp-content/uploads/2019/12/TFT-Lucian-in-game.jpg',
+        name: 'Lucian',
+        synergy1: 'Light',
+        synergy2: '搜綁得',
+        cost: 4,
+        items: "BFsword + bow x 3"
+    },
+
+    {
+        image: 'https://mobalytics.gg/wp-content/uploads/2019/12/TFT-Senna-in-game.jpg',
+        name: 'Senna',
+        synergy1: 'Shadow',
+        synergy2: '搜綁得',
+        cost: 2,
+        items: "Guardian Angel(Vest + BFsword), Morello(Stick + Belt)"
+    },
+
+    {
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgbRi20S0TRDZ2LkkaSzLazcV1cf7CWzMytOXXMMeHM2E9zU96lA&s',
+        name: 'Annie',
+        synergy1: 'Inferno',
+        synergy2: 'Summoner',
+        cost: 4,
+        items: "Morello(Stick + Belt) and anything tanky You can go mage item if you want so she summons 2 bears"
+    },
+    {
+        image: 'https://www.breakflip.com/uploads/Drui/2019/Aout/NouveauDossier/TFT/yorick-nouveau-champion-tft-infos-set-2.jpg',
+        name: 'Yorick',
+        synergy1: 'Light',
+        synergy2: 'Summoner',
+        cost: 4,
+        items: "Zeke's (Sword + Belt), Redemption(Tear + belt), anything tanky like vest+vest cloak+cloak, keep him alive long so he casts alot of times"
+    },
+
 
 ];
 
@@ -66,7 +101,7 @@ function getChampion(name){
         console.log(response);
 
         $("#name").text(response.name)
-                  .append("<div><img src = '"+response.image+"' alt = img>");
+                  .append("<div><img style = 'height: 200px' src = '"+response.image+"' alt = img>");
         $("#cost").text("Cost " + response.cost + " 金");
         $("#syn1").text(response.synergy1);
         $("#syn2").text(response.synergy2);
