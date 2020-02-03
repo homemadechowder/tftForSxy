@@ -149,7 +149,7 @@ function getChampion(name){
 }
 
 function getSynergy1(synergy1){
-    $.get("/api/champions/synergy/"+synergy1)
+    $.get("/api/champions/"+synergy1)
     .then(function(response){
         console.log(response);
 
@@ -169,7 +169,7 @@ function getSynergy1(synergy1){
     });
 }
 function getSynergy2(synergy2){
-    $.get("/api/champions/synergy/"+synergy2)
+    $.get("/api/champions/"+synergy2)
     .then(function(response){
         console.log(response);
 
@@ -189,7 +189,7 @@ function getSynergy2(synergy2){
     });
 }
 function getSynergy3(synergy3){
-    $.get("/api/champions/synergy/"+synergy3)
+    $.get("/api/champions/"+synergy3)
     .then(function(response){
         console.log(response);
 
