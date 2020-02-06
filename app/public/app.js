@@ -92,22 +92,22 @@ $("#search-btn1").on("click", function(){
 
     
 });
-$("#search-btn2").on("click", function(){
-    var input = $("#character-search").val().trim();
+// $("#search-btn2").on("click", function(){
+//     var input = $("#character-search").val().trim();
     
-    getSynergy1(input);
-});
-$("#search-btn3").on("click", function(){
-    var input = $("#character-search").val().trim();
+//     getSynergy1(input);
+// });
+// $("#search-btn3").on("click", function(){
+//     var input = $("#character-search").val().trim();
     
-    getSynergy2(input);
+//     getSynergy2(input);
 
-});
-$("#search-btn4").on("click", function(){
-    var input = $("#character-search").val().trim();
+// });
+// $("#search-btn4").on("click", function(){
+//     var input = $("#character-search").val().trim();
     
-    getSynergy3(input);
-});
+//     getSynergy3(input);
+// });
 
 $("#add-btn").on("click", function(){
     var newChamp = {
