@@ -22,34 +22,34 @@ module.exports = function(app) {
   });
 
   //Get route for synergy
-  app.get("/api/champions/:synergy1", function(req, res) {
-    db.champions.findAll({
-      where:{
-        synergy1:req.params.synergy1
-      }
-    }).then(function(results){
-      res.json(results);
-    })
-  });
-  app.get("/api/champions/:synergy2", function(req, res) {
-    db.champions.findAll({
-      where:{
-        synergy2:req.params.synergy2
-      }
-    }).then(function(results){
-      res.json(results);
-    })
-  });
+  // app.get("/api/champions/:synergy1", function(req, res) {
+  //   db.champions.findAll({
+  //     where:{
+  //       synergy1:req.params.synergy1
+  //     }
+  //   }).then(function(results){
+  //     res.json(results);
+  //   })
+  // });
+  // app.get("/api/champions/:synergy2", function(req, res) {
+  //   db.champions.findAll({
+  //     where:{
+  //       synergy2:req.params.synergy2
+  //     }
+  //   }).then(function(results){
+  //     res.json(results);
+  //   })
+  // });
 
-  app.get("/api/champions/:synergy3", function(req, res) {
-    db.champions.findAll({
-      where:{
-        synergy3:req.params.synergy3
-      }
-    }).then(function(results){
-      res.json(results);
-    })
-  });
+  // app.get("/api/champions/:synergy3", function(req, res) {
+  //   db.champions.findAll({
+  //     where:{
+  //       synergy3:req.params.synergy3
+  //     }
+  //   }).then(function(results){
+  //     res.json(results);
+  //   })
+  // });
 
   app.get("/api/champions/:name", function(req, res) {
     db.champions.findOne({
