@@ -72,6 +72,14 @@ var champions = [
         cost: 5,
         items: "If going light: Guardian Angel(Sword + Vest), Redemption(Tear + belt), Light Item(金鏟+cloak) These are ideal. Just put items that are useful for everyone because he doubles."
     },
+    {
+        image: "https://lolstatic-a.akamaihd.net/frontpage/apps/prod/shurima-2016/en_US/c9086fcc7c767c891424c11682e31d1a7635f569/assets/img/champions/azir/azir-hero-mobile.jpg",
+        name: "Azir",
+        synergy1: "Desert",
+        synergy2: "Summoner",
+        cost: 3,
+        items: "Azir is good with attack speed and spell damage. He needs to have items to be good, MUST HAVE >> Guinsoo (Stick + bow) , then Morello(Stick + Belt) or Shojin(Tear + BFsword). If going blade masters, give azir Blademaster Item (Bow + 金鏟子)"
+    }
 
 
 
